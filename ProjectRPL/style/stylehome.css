@@ -1,0 +1,511 @@
+@import "compass/css3";
+
+body {
+	margin:0;
+	position:absolute;
+	height:100%;
+	width:100%;
+	left:0;right:0;top:0;bottom:0;
+	background-size:cover;
+}
+
+@font-face {
+	font-family: 'Code';
+	src:url('../font/CODE Bold.otf');
+}
+
+@font-face {
+	font-family: 'BaronNeue';
+	src:url('../font/Baron Neue Bold.otf');
+}
+
+@font-face {
+	font-family: 'SlimJoe';
+	src:url('../font/Slim Joe.otf');
+}
+
+@font-face {
+	font-family: 'BigJohn';
+	src:url('../font/BIG JOHN.otf');
+}
+
+@font-face {
+	font-family: 'Hightide';
+	src:url('../font/HighTide Sans.otf');
+}
+
+div {
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+#main {
+	top:0;
+	float: left;
+	margin:0;
+	background-image:url('../img/bg1.jpg');
+	font-family: 'Code';
+	background-size: 100%;
+}
+
+
+.header {
+	width:80%;
+	height:10%;
+	font-size:50px;
+	text-align: center;
+	padding-top:0.5%;
+	margin-right: auto;
+	margin-left: auto;
+	color:#0185c5;
+	z-index: 20;
+}
+
+.logo {
+	margin-top:11%;
+	margin-right: auto;
+	margin-left: auto;
+	width:30%;
+	height:30%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../img/unsblue.png');
+}
+
+.bord {
+	margin:auto;
+	width:65%;
+	height:1%;
+	margin-top:2%;
+	border-top: 1px solid #0185c5;
+	z-index: 20;
+}
+
+nav {
+  width: 40%;
+  margin-top:1%;
+  margin-right: 2%;
+  float:right;
+  font-family: 'Code';
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+nav p {
+	font-size:20px;
+	display: inline-block;
+	margin-top:-1%;
+	color:#80b3ff;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color:#0185c5;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #015ac5;
+}
+
+
+/* stroke */
+nav.stroke ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #015ac5;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.pen-outer {
+	height:auto;
+
+}
+
+#what {
+	background-color: #5f8dd3;
+	height:50%;
+	width:100%;
+	margin:0;
+	float: left;
+	top:100vh;
+}
+
+#what h1 {
+	margin-top: 3%;
+	font-size:80px;
+	text-align: center;
+	color:#f9f9f9;
+	font-family: 'BaronNeue';
+}
+
+#what p {
+	font-size:30px;
+	font-family: 'SlimJoe';
+	color:#f9f9f9;
+	text-align: center;
+}
+
+.whatul {
+	width:50%;
+	height:1%;
+	border-top:1px solid #f9f9f9;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.desc {
+	width:75%;
+	height:30%;
+	font-size:15px;
+	text-transform: uppercase;
+	text-align: justify;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#syarat {
+	background:transparent;
+	height:80%;
+	width:100%;
+	margin:0;
+	float: left;
+	top:150vh;
+	display: inline;
+}
+
+#syarat h1 {
+	font-size:50px;
+	text-align: center;
+	color:#f9f9f9;
+	font-family: 'BigJohn';
+}
+
+#syarat p {
+	margin-left:5%;
+	margin-right: 5%;
+	font-size:15px;
+	font-family: 'Hightide';
+	color:#f9f9f9;
+	text-align: justify;
+}
+
+.rata {
+	margin-left:2%;
+}
+
+#syaratleft {
+	width:40%;
+	height:100%;
+	background-size: cover;
+	background-image:url('../img/viewuns.jpg');
+	float: left;
+}
+
+#syaratright {
+	width:60%;
+	height:100%;
+	background-color: #87aade;
+	float:left;
+}
+
+.syaratbox {
+	width:90%;
+	height:90%;
+	border-left:1px solid #f9f9f9;
+	margin-left:3%;
+}
+
+.schedule {
+	width:100%;
+	height:40%;
+	background-image:url('../img/bg1.jpg');
+	background-size: 100%;
+	top:230vh;
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+    z-index: 9999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1.0;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width:50%;
+    height:60%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 1;
+}
+
+form input {
+	text-align: center;
+	width:70%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    position: absolute;
+    float: right;
+    text-align: center;
+    top: -4%;
+    right:-10%;
+    width: 2%;
+    height:1%;
+    text-decoration: none;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 3px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close p {
+	font-family: 'Code';
+	font-size: 12px;
+	text-align: center;
+	margin-top: -3%;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+
+form h1, input::-webkit-input-placeholder, button, .login {
+  font-family: 'Code', sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+}
+
+form h1 {
+  height: 25%;
+  width: 100%;
+  font-size: 18px;
+  background: #18aa8d;
+  color: #FFF;
+  margin-top: 10%;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  box-sizing: border-box;
+  width: 100%;
+  height:100%;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 40px;
+  border-radius: 3px;
+  opacity: 1;
+}
+form h1 {
+  box-sizing: border-box;
+  padding-top:12%;
+  padding-left:5%;
+}
+
+input {
+  margin: 40px 25px;
+  width: 200px;
+  display: block;
+  border: none;
+  padding: 10px 0;
+  border-bottom: solid 1px #1abc9c;
+  -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+          transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+  background-position: -200px 0;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  color: #0e6252;
+}
+input:focus, input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+input:focus::-webkit-input-placeholder, input:valid::-webkit-input-placeholder {
+  color: #1abc9c;
+  font-size: 11px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  visibility: visible !important;
+}
+
+button, .login {
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+}
+button:hover, .login {
+  -webkit-transform: translateY(-3px);
+      -ms-transform: translateY(-3px);
+          transform: translateY(-3px);
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+#howto {
+	height:140%;
+	width:100%;
+	float:left;
+	margin:0;
+	display: inline-block;
+}
+
+.howbox {
+	height:50%;
+	width:50%;
+	float:left;
+}
+
+.howbox h1 {
+	font-size:700px;
+	margin-top:-5%;
+	margin-left: -12%;
+	color:#FFF;
+	font-family: 'Code';
+}
+
+.howbox p {
+	font-size:15px;
+	color: #FFF;
+	font-family: 'Code';
+	width:55%;
+	text-align: justify;
+	position: relative;
+	margin-left:17%;
+	margin-top:-116%; 
+	line-height: 100%;
+	border:1px solid white;
+	padding:5px;
+}
+
+#date {
+	width: 100%;
+	height: 40%;
+	background-image:url('../img/lay2.png');
+	background-size: 100%;
+	float: left;
+	display:block;
+}
+
+.datepart {
+	width:100%;
+	height:49.5%;
+	float:left;
+	background-color: transparent;
+}
+
+.datepart p {
+	margin-top:4%;
+	height:70%;
+	text-align:center;
+	font-size: 30px;
+	font-family: 'Code';
+	color:#FFF;
+}
+
+.datediv {
+	width:70%;
+	height:1%;
+	float:left;
+	margin:0;
+	margin-left:15%;
+	background-color:#FFF;
+}
+
+#prodi {
+	width:100%;
+	height:70%;
+	float:left;
+	margin:0;
+	display:inline;
+}
+
+.prodipart {
+	height:100%;
+	width:33.333%;
+	margin:0;
+	float:left;
+}
+
+.prodipart h1 {
+	color:#FFF;
+	text-align: center;
+	font-size:80px;
+	font-family: 'Code';
+}
+
+.prodipart p {
+	width:90%;
+	margin-left:5%;
+	font-family: 'Code';
+	text-align: justify;
+	font-size: 15px;
+	color:#FFF;
+}
+
+.prodiline {
+	margin-top:-15%;
+	width:50%;
+	height:1%;
+	margin-left:auto;
+	margin-right: auto;
+	border-top:1px solid white;
+}
