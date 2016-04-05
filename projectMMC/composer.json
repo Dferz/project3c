@@ -1,0 +1,21 @@
+{
+    "name": "fdisotto/slim-activerecord",
+    "description": "A Slim Framework and Activerecord application",
+    "keywords": ["microframework", "rest", "router"],
+    "homepage": "http://github.com/fdisotto/slim-activerecord",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabio Di Sotto",
+            "email": "fabio.disotto@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "monolog/monolog": "1.*",
+        "slim/slim": "2.*",
+        "slim/views": "0.*",
+        "twig/twig": "1.*",
+        "php-activerecord/php-activerecord": "1.*"
+    }
+}
